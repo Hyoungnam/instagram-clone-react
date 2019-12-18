@@ -71,9 +71,9 @@ const Main = () => {
     );
   const [storyData, setStoryData] = useState(
     [
-      {id:'_yum_s', date:"16분전", picURL:"https://scontent-icn1-1.cdninstagram.com/vp/dcca337e93686997df102361db60db2c/5DF4ED4F/t51.2885-19/s320x320/51616861_258531261731722_2335377231565553664_n.jpg?_nc_ht=scontent-icn1-1.cdninstagram.com"},
-      {id:'drink_eat_drink', date:"3시간 전", picURL:"https://scontent-icn1-1.cdninstagram.com/vp/dcca337e93686997df102361db60db2c/5DF4ED4F/t51.2885-19/s320x320/51616861_258531261731722_2335377231565553664_n.jpg?_nc_ht=scontent-icn1-1.cdninstagram.com"},
-      {id:'hyukc', date:"20시간 전", picURL:"https://scontent-icn1-1.cdninstagram.com/vp/dcca337e93686997df102361db60db2c/5DF4ED4F/t51.2885-19/s320x320/51616861_258531261731722_2335377231565553664_n.jpg?_nc_ht=scontent-icn1-1.cdninstagram.com"}
+      {id:'_yum_s', date:"16분전", picURL:"https://scontent-icn1-1.cdninstagram.com/vp/fe72f0704a8e80eab0e1040e42a4b465/5E0DD110/t51.2885-19/s320x320/67879165_662272640917279_8881524564585086976_n.jpg?_nc_ht=scontent-icn1-1.cdninstagram.com"},
+      {id:'drink_eat_drink', date:"3시간 전", picURL:"https://scontent-icn1-1.cdninstagram.com/vp/fe72f0704a8e80eab0e1040e42a4b465/5E0DD110/t51.2885-19/s320x320/67879165_662272640917279_8881524564585086976_n.jpg?_nc_ht=scontent-icn1-1.cdninstagram.com"},
+      {id:'hyukc', date:"20시간 전", picURL:"https://scontent-icn1-1.cdninstagram.com/vp/fe72f0704a8e80eab0e1040e42a4b465/5E0DD110/t51.2885-19/s320x320/67879165_662272640917279_8881524564585086976_n.jpg?_nc_ht=scontent-icn1-1.cdninstagram.com"}
     ]
   );
   const [forUser, setForUser] = useState(
@@ -83,7 +83,7 @@ const Main = () => {
       {id:'flexinon', whatFor:"회원님을 팔로우합니다", picURL:'https://scontent-icn1-1.cdninstagram.com/vp/fe72f0704a8e80eab0e1040e42a4b465/5E0DD110/t51.2885-19/s320x320/67879165_662272640917279_8881524564585086976_n.jpg?_nc_ht=scontent-icn1-1.cdninstagram.com'}
     ]
   );
-  const deleteComment = (_id, _index) => {
+  const deleteComment = (_id, _index) => () => {
     if(_id === user) {
       const targetIndex = comment.findIndex((x,index)=>{return x.id === _id && 
                                                               (x.id + index.toString()) === _index});

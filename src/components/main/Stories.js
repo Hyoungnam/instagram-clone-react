@@ -33,7 +33,7 @@ const Canvas = styled.canvas`
 
 const makeCanvas = (crl) => {
   crl.beginPath()
-  crl.arc(75, 75, 60, 0, 2*Math.PI);
+  crl.arc(72, 74, 60, 0, 2*Math.PI);
   crl.fillStyle = 'rgba(0, 0, 0, 0)';
   crl.fill();
   

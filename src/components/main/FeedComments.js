@@ -19,7 +19,7 @@ const FeedComments = ({comment, deleteComment}) => {
   const comments = comment.map(({id, comment}, index)=>{
     return <div key={id + index.toString()}>
               <Span>{id}</Span>
-              <Span onDoubleClick={()=>{deleteComment(id,id + index.toString())}} content="true">{comment}</Span>
+              <Span onDoubleClick={deleteComment(id,id + index.toString())} content="true">{comment}</Span>
            </div>
   });
   return(
